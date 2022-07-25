@@ -1,25 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import MapComponent from './MapComponent';
+
+const mapContainerStyle = {
+  width: "100vw",
+  height: "100vh",
+};
+
+const center = {
+  lat: 37.3352,
+  lng: -121.8811,
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <MapComponent mapContainerStyle={mapContainerStyle} center={center} zoom={15}/>
 }
 
 export default App;
