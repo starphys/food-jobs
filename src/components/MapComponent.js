@@ -1,5 +1,5 @@
 import {GoogleMap, useLoadScript} from "@react-google-maps/api";
-import configInfo from "./config.json"
+import configInfo from "../config.json"
 
 const defaultMapContainerStyle = {
   width: "100vw",
