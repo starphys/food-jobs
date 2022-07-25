@@ -1,5 +1,5 @@
 import './App.css';
-import MapComponent from './MapComponent';
+import MapComponent from './components/MapComponent';
 
 const mapContainerStyle = {
   width: "100vw",
@@ -12,7 +12,11 @@ const center = {
 }
 
 function App() {
-  return <MapComponent mapContainerStyle={mapContainerStyle} center={center} zoom={15}/>
+  return<div> 
+    <h1>Spatula <span role="img" aria-label="fork-and-knife">🍽️</span></h1> 
+    <MapComponent mapContainerStyle={mapContainerStyle} center={center} zoom={15}/>
+  </div>
+
 }
 
 export default App;
