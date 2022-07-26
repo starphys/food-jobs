@@ -1,4 +1,5 @@
 import {GoogleMap, useLoadScript} from "@react-google-maps/api";
+import Markers from './Markers';
 import configInfo from "../config.json"
 
 const defaultMapContainerStyle = {
@@ -13,8 +14,7 @@ const defaultCenter = {
 
 const defaultZoom = 15;
 
-
-function MapComponent({mapContainerStyle = defaultMapContainerStyle, center = defaultCenter, zoom = defaultZoom}) {
+function MapComponent({mapContainerStyle = defaultMapContainerStyle, center = defaultCenter, zoom = defaultZoom, listings}) {
   const {isLoaded, loadError} = useLoadScript({
     googleMapsApiKey: configInfo.REACT_APP_GOOGLE_MAPS_API_KEY,
   })
@@ -22,12 +22,14 @@ function MapComponent({mapContainerStyle = defaultMapContainerStyle, center = de
   if(loadError) {return "Error loading maps"} 
   if(!isLoaded) {return "Loading Maps"}
 
-  return <div>
+  return( <div>
     <GoogleMap 
       mapContainerStyle={mapContainerStyle}
       zoom={zoom}
-      center={center}></GoogleMap>
-      </div>
+      center={center}>
+      <Markers listings={listings} />
+    </GoogleMap>
+  </div> );
 }
 
 export default MapComponent;
