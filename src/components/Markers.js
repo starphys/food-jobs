@@ -12,7 +12,6 @@ function Markers({listings}) {
     setActiveMarker(marker);
   };
 
-
   return (<div>
     {listings.map(({ id, title, company, pay, position }) => (
         <MarkerF
