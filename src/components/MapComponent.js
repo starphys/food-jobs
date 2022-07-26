@@ -14,7 +14,24 @@ const defaultCenter = {
 
 const defaultZoom = 15;
 
-function MapComponent({mapContainerStyle = defaultMapContainerStyle, center = defaultCenter, zoom = defaultZoom, listings}) {
+const defaultClickableIcons = false;
+
+// Experiments with MapOptions
+/*
+const defaultOptions = {
+  "clickableIcons" : "false",
+  "style" : [ 
+    {
+      "featureType": "poi",
+      "stylers": [
+        { "visibility": "off" }
+      ]
+    }
+  ]
+}
+*/
+
+function MapComponent({mapContainerStyle = defaultMapContainerStyle, center = defaultCenter, zoom = defaultZoom, clickableIcons = defaultClickableIcons, listings}) {
   const {isLoaded, loadError} = useLoadScript({
     googleMapsApiKey: configInfo.REACT_APP_GOOGLE_MAPS_API_KEY,
   })
@@ -26,7 +43,8 @@ function MapComponent({mapContainerStyle = defaultMapContainerStyle, center = de
     <GoogleMap 
       mapContainerStyle={mapContainerStyle}
       zoom={zoom}
-      center={center}>
+      center={center}
+      clickableIcons={clickableIcons}>
       <Markers listings={listings} />
     </GoogleMap>
   </div> );
