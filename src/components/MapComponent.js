@@ -1,5 +1,14 @@
 import {GoogleMap, useLoadScript} from "@react-google-maps/api";
+import MarkerComponent from './MarkerComponent';
 import configInfo from "../config.json"
+
+const listing = {
+  id: 3,
+  title: "Host/Hostess",
+  company: "Chunky Cheese",
+  pay: 15,
+  position: { lat: 37.33493148426, lng: -121.8808998386},
+}
 
 const defaultMapContainerStyle = {
   width: "100vw",
@@ -22,12 +31,14 @@ function MapComponent({mapContainerStyle = defaultMapContainerStyle, center = de
   if(loadError) {return "Error loading maps"} 
   if(!isLoaded) {return "Loading Maps"}
 
-  return <div>
+  return( <div>
     <GoogleMap 
       mapContainerStyle={mapContainerStyle}
       zoom={zoom}
-      center={center}></GoogleMap>
-      </div>
+      center={center}>
+      <MarkerComponent listing={listing} />
+    </GoogleMap>
+  </div> );
 }
 
 export default MapComponent;

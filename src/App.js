@@ -1,6 +1,9 @@
 import './App.css';
 import MapComponent from './components/MapComponent';
 
+
+
+
 const mapContainerStyle = {
   width: "100vw",
   height: "100vh",
