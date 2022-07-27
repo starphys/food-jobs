@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { InfoWindowF, MarkerF } from "@react-google-maps/api";
+import JobListing from "./JobListing.js";
 
 
 function Markers({listings}) {
@@ -13,15 +14,15 @@ function Markers({listings}) {
   };
 
   return (<div>
-    {listings.map(({ id, title, company, pay, position }) => (
+    {listings.map(listing => (
         <MarkerF
-          key={id}
-          position={position}
-          onClick={() => handleActiveMarker(id)}
+          key={listing.id}
+          position={listing.position}
+          onClick={() => handleActiveMarker(listing.id)}
         >
-          {activeMarker === id ? (
+          {activeMarker === listing.id ? (
             <InfoWindowF onCloseClick={() => setActiveMarker(null)}>
-              <div><h1>{title}</h1>{company}<br/>${pay}/hr<br/><button>Apply Now!</button></div>
+              <JobListing listing={listing}/>
             </InfoWindowF>
           ) : null}
         </MarkerF> ))}</div>);
