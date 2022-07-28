@@ -14,7 +14,7 @@ const defaultCenter = {
 
 const defaultZoom = 15;
 
-function MapComponent({mapContainerStyle = defaultMapContainerStyle, center = defaultCenter, zoom = defaultZoom, listings}) {
+function MapComponent({mapContainerStyle = defaultMapContainerStyle, center = defaultCenter, zoom = defaultZoom, listings, options}) {
   const {isLoaded, loadError} = useLoadScript({
     googleMapsApiKey: configInfo.REACT_APP_GOOGLE_MAPS_API_KEY,
   })
@@ -26,8 +26,9 @@ function MapComponent({mapContainerStyle = defaultMapContainerStyle, center = de
     <GoogleMap 
       mapContainerStyle={mapContainerStyle}
       zoom={zoom}
-      center={center}>
-      <Markers listings={listings} />
+      center={center}
+      options={options}>
+      <Markers listings={listings}/>
     </GoogleMap>
   </div> );
 }
