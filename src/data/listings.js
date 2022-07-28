@@ -1,21 +1,19 @@
-export const listings = [{
-    id: 1,
-    title: "Host/Hostess",
-    company: "Chunky Cheese",
-    pay: 15,
-    position: { lat: 37.33493148426, lng: -121.8808998386},
+export const listings = [
+  {
+      id: 1,
+      title: "Whispers Cafe and Creperie",
+      pos: "Server",
+      desc: "Become a server and join our amazing team",
+      pay: "$17.50 + tips",
+      position: { lat: 37.33392966859074, lng: -121.88669260386027}
   },
   {
-    id: 2,
-    title: "Waiter",
-    company: "Chunkly Cheese",
-    pay: 15,
-    position: { lat: 37.33593148426, lng: -121.8818998386},
-  },
-  {
-    id: 3,
-    title: "Mouse",
-    company: "Chunkly Cheeks",
-    pay: 15,
-    position: { lat: 37.33693148426, lng: -121.8828998386},
-  },];
+      id: 2,
+      title: "Paper Plane",
+      pos:  "Bartender",
+      desc: "Serve artisinal drinks at this fine establishment",
+      pay: "$18.00 + tips",
+      position: { lat: 37.33504654119588, lng: -121.8894964369294}
+     
+  }
+]
