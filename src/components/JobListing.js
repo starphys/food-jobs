@@ -1,4 +1,5 @@
 import React from 'react'
+import ApplyButton from './ApplyButton'
 
 function JobListing({ listing }) {
   return (
@@ -7,6 +8,7 @@ function JobListing({ listing }) {
     <h3>{listing.title}</h3>
     <h3>Pay: {listing.pay}</h3>
     <h3>{listing.desc}</h3>
+    <ApplyButton/>
     </div>
   )
 }

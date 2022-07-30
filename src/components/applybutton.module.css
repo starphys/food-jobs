@@ -1,0 +1,18 @@
+button {
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  
+  padding: 10px 30px;
+  border-radius: 15px;
+  /* margin: 10px 0px; */
+  /* cursor: pointer; */
+}
+
+.button{
+  background-color: rgba(238, 215, 13, 0.411);
+}
+
+.button_clicked {
+  background-color: rgba(134, 121, 2, 0.411);
+
+}
