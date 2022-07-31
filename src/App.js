@@ -1,6 +1,7 @@
 import './App.css';
 import MapComponent from './components/MapComponent';
 import {listings} from "./data/listings"
+import Navbar from './data/Navbar';
 
 const mapContainerStyle = {
   width: "100vw",
@@ -25,9 +26,11 @@ const mapOptions = {
 
 function App() {
   return<div> 
-    <h1>Spatula <span role="img" aria-label="fork-and-knife">🍽️</span></h1> 
-    <MapComponent mapContainerStyle={mapContainerStyle} center={center} zoom={15} listings={listings} options={mapOptions}/>
+    {/* <MapComponent mapContainerStyle={mapContainerStyle} center={center} zoom={15} listings={listings} options={mapOptions}/> */}
+    <Navbar />
   </div>
+   
+  
 
 }
 
