@@ -1,7 +1,6 @@
 import './App.css';
 import React from 'react';
 import MapComponent from './components/MapComponent';
-import {listings} from "./data/listings"
 
 const mapContainerStyle = {
   width: "100vw",
