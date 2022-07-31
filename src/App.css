@@ -9,6 +9,42 @@ body {
 .navigation {
   background-color: aliceblue;
   text-align: center;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem; 
+  padding: 0 1rem;
+  text-decoration: none;
+}
+
+
+.website-name {
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.navigation ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navigation a {
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: .20rem;
+}
+
+.navigation li.active {
+  background-color: #60747a; 
+}
+
+.navigation li:hover {
+  background-color: #61dafb;
 }
 
 .navigation-logo {

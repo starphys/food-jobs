@@ -3,8 +3,11 @@ export default function Navbar() {
         <nav className="navigation">
             <a href="/" className="website-name">Spatula <span role="img" aria-label="fork-and-knife">🍽️</span></a>
             <ul>
-                <li>
+                <li > 
                     <a href="/about">About Us</a>
+                </li>
+                <li>
+                    <a href="/joblistings">Map Job Listings</a>
                 </li>
                 <li>
                     <a href="/skills">SkillBuild</a>
