@@ -4,7 +4,7 @@ import MapComponent from './components/MapComponent';
 
 const mapContainerStyle = {
   width: "100vw",
-  height: "100vh",
+  height: "85vh",
 };
 
 const center = {
@@ -39,6 +39,7 @@ function App() {
   return<div class="Background"> 
     <h1 class="Spatula-Heading">Spatula <span role="img" aria-label="fork-and-knife">🍽️</span></h1> 
     <MapComponent mapContainerStyle={mapContainerStyle} center={center} zoom={15} listings={data} options={mapOptions}/>
+    <div className="Spatula-Footer" />
   </div>
 
 }

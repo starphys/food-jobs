@@ -49,6 +49,15 @@ This is more minty green
 .Spatula-Heading{
   color: white;
   font-size: 40px;
+  margin: 0;
+  padding-block: 10px;
+}
+
+.Spatula-Footer{
+  color: white;
+  font-size: 40px;
+  margin: 0;
+  min-height: 40px;
 }
 
 .Background{
