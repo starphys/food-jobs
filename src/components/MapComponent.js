@@ -1,4 +1,4 @@
-import {GoogleMap, useLoadScript} from "@react-google-maps/api";
+import {GoogleMap, TransitLayer, useLoadScript} from "@react-google-maps/api";
 import Markers from './Markers';
 import configInfo from "../config.json"
 
@@ -29,6 +29,7 @@ function MapComponent({mapContainerStyle = defaultMapContainerStyle, center = de
       center={center}
       options={options}>
       <Markers listings={listings}/>
+      <TransitLayer onLoad={()=>console.log("TransitLayer loaded.")}/>
     </GoogleMap>
   </div> );
 }
