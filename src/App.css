@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+.box {
+  margin: 1rem;
+  text-align: center;
+}
+
 body {
   margin: 0;
 }
