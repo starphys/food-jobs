@@ -3,8 +3,10 @@ import ApplyButton from './ApplyButton'
 
 function JobListing({ listing }) {
   return (
-    <div key={listing.id}>
-    <h1>{listing.pos}</h1>
+    <div class="Job-Listing" key={listing.id}>
+    <h1 style={{fontFamily:"Verdana, sans-serif"}}>
+      {listing.pos}
+    </h1>
     <h3>{listing.title}</h3>
     <h3>Pay: {listing.pay}</h3>
     <h3>{listing.desc}</h3>

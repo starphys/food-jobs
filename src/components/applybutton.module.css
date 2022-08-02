@@ -1,18 +1,19 @@
 button {
-  color: rgb(0, 0, 0);
+  color: black;
   font-size: 15px;
-  
+  font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
+  'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 
+  'Helvetica Neue', sans-serif;
+  font-weight: 650;
   padding: 10px 30px;
   border-radius: 15px;
-  /* margin: 10px 0px; */
-  /* cursor: pointer; */
 }
 
 .button{
-  background-color: rgba(238, 215, 13, 0.411);
+  background-color: #F5FF90;
 }
 
 .button_clicked {
-  background-color: rgba(134, 121, 2, 0.411);
+  background-color: #57b89a;
 
 }

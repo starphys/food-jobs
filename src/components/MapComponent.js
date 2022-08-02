@@ -1,6 +1,6 @@
 import {GoogleMap, TransitLayer, useLoadScript} from "@react-google-maps/api";
 import Markers from './Markers';
-import configInfo from "../config.json"
+import configInfo from "../config.json";
 
 const defaultMapContainerStyle = {
   width: "100vw",
