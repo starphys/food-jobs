@@ -1,3 +1,4 @@
+import React from 'react';
 import MapComponent from "../components/MapComponent";
 import {listings} from "../data/listings"
 
@@ -23,6 +24,17 @@ const mapOptions = {
 }
 
 export default function Joblistingspage() {
+  // const [data, setData] = React.useState(null);
+
+  // React.useEffect(() => {
+  //   fetch("/api")
+  //     .then((res) => res.json())
+  //     .then((data) => {console.log(data); setData(data)});
+  // }, []);
+
+  // if(!data) {
+  //   return "Loading data from cloudant"
+  // }
     return (<>
         <h1>Job Listings</h1>
         <h2>
@@ -42,3 +54,4 @@ export default function Joblistingspage() {
         </div>
     </>)
 }
+// instead of listings={data}

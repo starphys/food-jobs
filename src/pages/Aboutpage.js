@@ -1,10 +1,10 @@
-import React from 'react';
+// import React from 'react';
 
-export default function Aboutpage() {
-    return (<>
-        <h1>About Us</h1>
-        <p>
+// export default function Aboutpage() {
+//     return (<>
+//         <h1>About Us</h1>
+//         <p>
             
-        </p>
-    </>)
-}
+//         </p>
+//     </>)
+// }
