@@ -47,8 +47,7 @@ function App() {
           <Route path="/profile" element={<Profilepage />} />
           <Route path="/contact" element={<Contactpage />} />
         </Routes>
-        </div>
-      
+      </div>
     </>
   )
 }

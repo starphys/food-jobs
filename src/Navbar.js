@@ -1,23 +1,25 @@
-import { Link } from "react-router-dom" // works as anchor tag
+import { Link, useMatch, useResolvedPath } from "react-router-dom" // works as anchor tag
 export default function Navbar() {
     return (
         <nav className="navigation">
             <Link to="/" className="website-name">Spatula <span role="img" aria-label="fork-and-knife">🍽️</span></Link>
             <ul>
-                <displayPage to="/about">About Us</displayPage>
-                <displayPage to="/joblistings">SkillBuild</displayPage>
-                <displayPage to="/skills">Relax</displayPage>
-                <displayPage to="/profile">Profile</displayPage>
-                <displayPage to="/contact">Contact Us</displayPage>
+                <DisplayPage to="/about">About Us</DisplayPage>
+                <DisplayPage to="/joblistings">Job Listings</DisplayPage>
+                <DisplayPage to="/skills">SkillBuild</DisplayPage>
+                <DisplayPage to="/relax">Relax</DisplayPage>
+                <DisplayPage to="/profile">Profile</DisplayPage>
+                <DisplayPage to="/contact">Contact Us</DisplayPage>
             </ul>
         </nav>
     )
 }
 
-function displayPage({to, children,...props}) {
-    const path = window.location.pathname
+function DisplayPage({to, children,...props}) {
+    const resolvedPath = useResolvedPath(to)
+    const isActive = useMatch({path: resolvedPath.pathname, end: true})
     return (
-        <li className={path === to ? "active" : ""}>
+        <li className={isActive ? "active" : ""}>
             <Link to={to} {...props}>{children}</Link>
         </li>
     )
