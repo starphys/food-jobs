@@ -4,12 +4,12 @@ export default function Navbar() {
         <nav className="navigation">
             <Link to="/" className="website-name">Spatula <span role="img" aria-label="fork-and-knife">🍽️</span></Link>
             <ul>
-                {/* <DisplayPage to="/about">About Us</DisplayPage> */}
+                <DisplayPage to="/about">About Us</DisplayPage>
                 <DisplayPage to="/joblistings">Job Listings</DisplayPage>
-                <DisplayPage to="/skills">SkillBuild</DisplayPage>
+                <DisplayPage to="/skills">Skill Honer</DisplayPage>
                 <DisplayPage to="/relax">Relax</DisplayPage>
-                <DisplayPage to="/profile">Profile</DisplayPage>
-                <DisplayPage to="/contact">Contact Us</DisplayPage>
+                {/* <DisplayPage to="/profile">Profile</DisplayPage> */}
+                {/* <DisplayPage to="/contact">Contact Us</DisplayPage> */}
             </ul>
         </nav>
         <div className="Spatula-Footer" />
