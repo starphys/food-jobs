@@ -1,3 +1,4 @@
+// import './App.css';
 import MapComponent from './components/MapComponent';
 import {listings} from "./data/listings"
 
@@ -23,5 +24,10 @@ const mapOptions = {
 }
 
 export default function Joblistingspage() {
-    return <h1>Job Listings</h1>
+    return (<>
+        <h1>Job Listings</h1>
+        <div>
+            <MapComponent mapContainerStyle={mapContainerStyle} center={center} zoom={15} listings={listings} options={mapOptions} />
+        </div>
+    </>)
 }
