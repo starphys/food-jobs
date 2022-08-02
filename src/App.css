@@ -11,19 +11,21 @@ body {
   margin: 0;
 }
 
+.website-name {
+  color: white;
+  font-size: 40px;
+  margin: 0;
+  padding-block: 10px;
+  text-decoration: none;
+}
+
 .navigation {
-  background-color: aliceblue;
+  background-color: #65ccb8;
   text-align: center;
   justify-content: space-between;
   align-items: stretch;
   gap: 2rem; 
   padding: 0 1rem;
-  text-decoration: none;
-}
-
-
-.website-name {
-  font-size: 2rem;
   text-decoration: none;
 }
 

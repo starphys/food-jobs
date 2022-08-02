@@ -1,10 +1,9 @@
-// import './App.css';
-import MapComponent from './components/MapComponent';
-import {listings} from "./data/listings"
+import MapComponent from "../components/MapComponent";
+import {listings} from "../data/listings"
 
 const mapContainerStyle = {
   width: "100vw",
-  height: "100vh",
+  height: "85vh",
 };
 
 const center = {
